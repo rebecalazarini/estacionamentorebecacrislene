@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "api/server.js",
   "scripts": {
-    "dev": "npx nodemon api/server.js"
+    "dev": "npx nodemon api/server.js",
+    "postinstall": "prisma migrate dev --name init && prisma generate"
   },
   "keywords": [],
   "author": "rebecalazarini",
@@ -15,5 +16,8 @@
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
     "prisma": "^6.15.0"
+  },
+   "devDependencies": {
+    "prisma": "^6.14.0"
   }
 }
